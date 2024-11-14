@@ -1,12 +1,18 @@
 #!/bin/bash
 
-set +x
-
+# author: Bruno Romero Costa Zandonai
+# version: 1.0.1
+# date: 14/11/2024
+# description: update the target branch, with the compare branch, receiving them on parameters
+# use case: update the release branch, with the develop branch, for example
 # execution: sh update_branches.sh -c COMPARE_BRANCH -t TARGET_BRANCH
 # example: sh update_branches.sh -c develop -t release
+# TO.DO(bruno.zandonai): implement logs
+#   log_date=$(date +'%Y-%m-%d_%H-%M-%S')
+#   LOG="update_branches.log"
 
-log_date=$(date +'%Y-%m-%d_%H-%M-%S')
-LOG="update_branches.log"
+set +x
+
 
 while getopts c:t: flag
 do
